@@ -53,14 +53,25 @@ This is a challenging lab. Here are some hints:
 - It's easy to get confused between getting an `Artist` _instance_ from a
   `Song` and an `Artist`'s name. To help make your form work easier, solve the
   `spec/models/song_spec.rb` _first_. You can run a single spec by invoking it
-  with e.g. `rspec spec/models/song_spec.rb`
+  with e.g. `rspec spec/models/song_spec.rb`.
+  - This test requires that you create custom getter and setter methods in the
+    `Song` class for `artist_name` and `artist_name=`, as well as
+    `note_contents` and `note_contents=`.
+  - The `artist_name` getter method should return the name of the `Artist`
+    associated with the `Song` as a string.
+  - The `artist_name=` setter method should take a string for an artist's name,
+    and create a new `Artist` with that name associated with the `Song`.
+  - The `note_contents` getter method should return an array of strings for all
+    the `Note` contents associated with the `Song`.
+  - The `note_contents=` setter method should take an array of string
+    representing `Note` contents, and create a new `Note` for each element in
+    the array.
 - Make use of the references below!
 - While we direct you to update `new.html.erb`, you're going to need to make
   changes in multiple models and the `SongsController`.
 
 ## References
 
-* [`has_many` association reference](https://guides.rubyonrails.org/association_basics.html#has-many-association-reference)
-* [`belongs_to` association reference](https://guides.rubyonrails.org/association_basics.html#belongs-to-association-reference)
-* [Specifying which parameters are accepted in Rails Controllers](https://apidock.com/rails/ActionController/Parameters/permit)
-
+- [`has_many` association reference](https://guides.rubyonrails.org/association_basics.html#has-many-association-reference)
+- [`belongs_to` association reference](https://guides.rubyonrails.org/association_basics.html#belongs-to-association-reference)
+- [Specifying which parameters are accepted in Rails Controllers](https://apidock.com/rails/ActionController/Parameters/permit)
